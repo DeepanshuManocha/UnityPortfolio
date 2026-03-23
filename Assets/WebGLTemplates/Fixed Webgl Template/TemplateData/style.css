@@ -1,0 +1,205 @@
+/* =========================
+   FONT
+========================= */
+@font-face {
+    font-family: "Open Sans";
+    src: url("/TemplateData/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========================
+   BASE LAYOUT
+========================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   UNITY LAYOUT
+========================= */
+#unity-page {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#unity-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* CENTERED 16:9 CANVAS */
+#unity-canvas {
+    display: block;
+    background: #000;
+
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    opacity: 0;
+    transition: opacity 1.4s ease;
+}
+
+#unity-canvas.loaded {
+    opacity: 1;
+}
+
+/* =========================
+   LOADING OVERLAY
+========================= */
+#loading-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: radial-gradient(circle at center,
+            rgba(18, 18, 18, 0.75) 0%,
+            rgba(0, 0, 0, 0.96) 100%);
+
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+#loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================
+   LOADING ANIMATION
+========================= */
+#loading-wrapper {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loadingBar {
+    width: 220px;
+    height: 220px;
+
+    opacity: 0.35;
+    transform: scale(0.92);
+
+    transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+
+#loadingBar.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#loadingBar.near-done {
+    transform: scale(1.05);
+    filter: blur(0.2px);
+}
+
+/* =========================
+   FULLSCREEN BUTTON
+========================= */
+#fullscreen-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 10000;
+
+    border: none;
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+
+    padding: 12px 16px;
+    font-size: 18px;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    transition: background 0.25s ease, transform 0.2s ease, opacity 0.3s ease;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#fullscreen-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#fullscreen-btn:hover {
+    background: rgba(0, 0, 0, 0.78);
+    transform: scale(1.04);
+}
+
+#fullscreen-btn:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   LEGACY (KEPT FROM YOUR FILE)
+========================= */
+#unity-warning {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    background: white;
+    padding: 10px;
+    display: none;
+}
+
+#unity-footer {
+    position: relative;
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.unity-mobile #unity-footer {
+    display: none;
+}
+
+#unity-fullscreen-button {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: url("fullscreen-button.png") no-repeat center;
+    background-size: contain;
+}
