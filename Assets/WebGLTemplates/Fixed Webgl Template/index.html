@@ -9,9 +9,9 @@
       content="
         default-src 'self';
         script-src 'self' 'unsafe-eval' 'unsafe-inline' https://unpkg.com blob:;
-        connect-src 'self';
+        connect-src 'self' https://unpkg.com;
         media-src 'self';
-        style-src 'self';
+        style-src 'self' 'unsafe-inline';
         img-src 'self' data: https: blob:;
         object-src 'none';
         form-action 'none';
