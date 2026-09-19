@@ -477,9 +477,11 @@ MonoBehaviour:
   bufferImage: {fileID: 1049460014}
   viewport: {fileID: 9307397}
   playOnEnable: 1
-  imageDuration: 3
+  imageDuration: 4
   transitionDuration: 0.5
   useUnscaledTime: 1
+  cameraSwitcher: {fileID: 635613145}
+  activationCamera: {fileID: 1762110024}
   direction: 0
   easing:
     serializedVersion: 2
@@ -505,6 +507,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  incomingScale: 0.96
+  outgoingAlpha: 0.35
   imageChanged:
     m_PersistentCalls:
       m_Calls: []

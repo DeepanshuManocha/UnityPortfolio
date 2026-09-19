@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlideshowImageCollection
   images:
   - {fileID: 1479884698, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
+  - {fileID: 1532667433, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
   - {fileID: 2143001845, guid: 403b005a0dbdf8241804d287e3133a3f, type: 3}
+  - {fileID: -665507290, guid: 403b005a0dbdf8241804d287e3133a3f, type: 3}
+  - {fileID: 1932858372, guid: d7372150b6a2b7848b421a0fbc5e641f, type: 3}
+  - {fileID: 584817234, guid: d7372150b6a2b7848b421a0fbc5e641f, type: 3}
+  - {fileID: 121789731, guid: 3604f7fbd7170b7419e94581bfde1752, type: 3}
+  - {fileID: -1754142959, guid: 3604f7fbd7170b7419e94581bfde1752, type: 3}
+  - {fileID: 805792339, guid: 3604f7fbd7170b7419e94581bfde1752, type: 3}

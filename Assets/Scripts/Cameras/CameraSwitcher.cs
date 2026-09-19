@@ -64,7 +64,9 @@ public class CameraSwitcher : MonoBehaviour
     private void Awake()
     {
         _activator = CreateActivator();
-        if (brain == null) brain = FindFirstObjectByType<CinemachineBrain>();
+
+        if (brain == null)
+            brain = FindAnyObjectByType<CinemachineBrain>();
     }
 
     private void OnEnable()
