@@ -4,12 +4,12 @@ using UnityEngine.Video;
 
 public class WebGLVideoRawImage : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    public RawImage rawImage;
-    public RenderTexture renderTexture;
-    public string videoFileName = "yourvideo.mp4";
+    [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private RawImage rawImage;
+    [SerializeField] private RenderTexture renderTexture;
+    [SerializeField] private string videoFileName = "yourvideo.mp4";
 
-    void Start()
+    private void Start()
     {
         videoPlayer.source = VideoSource.Url;
         videoPlayer.url = Application.streamingAssetsPath + "/" + videoFileName;
@@ -32,7 +32,7 @@ public class WebGLVideoRawImage : MonoBehaviour
         videoPlayer.Prepare();
     }
 
-    void OnPrepared(VideoPlayer vp)
+    private void OnPrepared(VideoPlayer vp)
     {
         vp.Play();
     }

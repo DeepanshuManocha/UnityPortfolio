@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d3d94a820462044da6e554d1a8d0695
+guid: d7372150b6a2b7848b421a0fbc5e641f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons and Logos_0
+      name: Sprite Sheet 3_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 824
-        width: 200
-        height: 200
+        x: 68
+        y: 924
+        width: 1002
+        height: 1022
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c00c1853b475f54abbc7eb0e9cd38a2
-      internalID: 658593774
+      spriteID: 1a0e050f6d2eecb4db2f6e66e1299df0
+      internalID: 1932858372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons and Logos_1
+      name: Sprite Sheet 3_10
       rect:
         serializedVersion: 2
-        x: 212
-        y: 824
-        width: 200
-        height: 200
+        x: 1183
+        y: 1087
+        width: 788
+        height: 859
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6414b4795f5b1e4181f310b473b1b02
-      internalID: 2133091348
+      spriteID: c9e88a37a285ef7409fb2960f7b9b775
+      internalID: -1379753607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons and Logos_2
+      name: Sprite Sheet 3_14
       rect:
         serializedVersion: 2
-        x: 412
-        y: 824
-        width: 200
-        height: 200
+        x: 68
+        y: 169
+        width: 1023
+        height: 575
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e285ec1cf0f524c9e8bdcf39454164
-      internalID: 408259884
+      spriteID: 7e9f8a67c279b9345862f224406c199f
+      internalID: 584817234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons and Logos_3
+      name: Sprite Sheet 3_23
       rect:
         serializedVersion: 2
-        x: 612
-        y: 824
-        width: 200
-        height: 200
+        x: 1261
+        y: 169
+        width: 631
+        height: 775
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,30 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ab8e2da3ab76d499c86a30bdccc657
-      internalID: -468214457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons and Logos_4
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 824
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04c39fb8c66110a478ef88b1d327d133
-      internalID: 1385938626
+      spriteID: 1e0aa77b71da64d4481d255e7125873f
+      internalID: 409191081
       vertices: []
       indices: 
       edges: []
@@ -223,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 47e66b18a8736ba44a580b6853dc3497
+    spriteID: 084d9bf836bfd744bb43f0ad74d4382f
     internalID: 0
     vertices: []
     indices: 
@@ -231,16 +209,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Icons and Logos_0: 658593774
-      Icons and Logos_1: 2133091348
-      Icons and Logos_2: 408259884
-      Icons and Logos_3: -468214457
-      Icons and Logos_4: 1385938626
-      Icons and Logos_5: 348680776
-      Icons and Logos_6: 127505739
-      Icons and Logos_7: -1791010785
+      Sprite Sheet 3_0: 1932858372
+      Sprite Sheet 3_1: -2029087326
+      Sprite Sheet 3_10: -1379753607
+      Sprite Sheet 3_11: -1313845629
+      Sprite Sheet 3_12: 1139192582
+      Sprite Sheet 3_13: 445913025
+      Sprite Sheet 3_14: 584817234
+      Sprite Sheet 3_15: 224887762
+      Sprite Sheet 3_16: -1054072272
+      Sprite Sheet 3_17: 1470387806
+      Sprite Sheet 3_18: 965230523
+      Sprite Sheet 3_19: 838313697
+      Sprite Sheet 3_2: 1558827015
+      Sprite Sheet 3_20: -565806016
+      Sprite Sheet 3_21: -832884088
+      Sprite Sheet 3_22: 848295823
+      Sprite Sheet 3_23: 409191081
+      Sprite Sheet 3_24: 1386223291
+      Sprite Sheet 3_3: 1862698715
+      Sprite Sheet 3_4: 672464290
+      Sprite Sheet 3_5: -1219103971
+      Sprite Sheet 3_6: -1960690783
+      Sprite Sheet 3_7: 1119733141
+      Sprite Sheet 3_8: -78036554
+      Sprite Sheet 3_9: 2037478529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
