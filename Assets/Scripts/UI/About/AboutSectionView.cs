@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
@@ -19,8 +20,10 @@ public class AboutSectionView : MonoBehaviour
     [SerializeField] private TMP_Text taglineText;
     [SerializeField] private Image backgroundImage;
 
-    [Header("Skills")]
-    [SerializeField] private UIItemViewList<AboutItem, AboutItemView> skills;
+    [Header("Industries")]
+    [SerializeField] private TMP_Text industriesTitleText;
+    [SerializeField] private Image industriesIconImage;
+    [SerializeField, FormerlySerializedAs("skills")] private UIItemViewList<AboutItem, AboutItemView> industries;
 
     [Header("Focus")]
     [SerializeField] private TMP_Text focusTitleText;
@@ -70,6 +73,8 @@ public class AboutSectionView : MonoBehaviour
         UIBinding.SetText(roleText, data.Role);
         UIBinding.SetText(bioText, data.Bio);
         UIBinding.SetText(taglineText, data.Tagline);
+        UIBinding.SetText(industriesTitleText, data.IndustriesTitle);
+        UIBinding.SetIcon(industriesIconImage, data.IndustriesIcon);
         UIBinding.SetText(focusTitleText, data.FocusTitle);
         UIBinding.SetIcon(focusIconImage, data.FocusIcon);
 
@@ -85,7 +90,7 @@ public class AboutSectionView : MonoBehaviour
             backgroundImage.enabled = data.Background != null;
         }
 
-        skills.Bind(data.Skills);
+        industries.Bind(data.Industries);
         focusItems.Bind(data.FocusItems);
     }
 

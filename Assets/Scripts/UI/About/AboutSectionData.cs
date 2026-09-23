@@ -35,8 +35,10 @@ public class AboutSectionData : ScriptableObject
     [SerializeField, TextArea(1, 4)] private string tagline;
     [SerializeField] private Sprite background;
 
-    [Header("Skills")]
-    [SerializeField] private List<AboutItem> skills = new();
+    [Header("Industries")]
+    [SerializeField] private string industriesTitle = "Industries";
+    [SerializeField] private Sprite industriesIcon;
+    [SerializeField] private List<AboutItem> industries = new();
 
     [Header("Focus")]
     [SerializeField] private string focusTitle = "What I Focus On";
@@ -52,7 +54,9 @@ public class AboutSectionData : ScriptableObject
     public string Bio => bio;
     public string Tagline => tagline;
     public Sprite Background => background;
-    public IReadOnlyList<AboutItem> Skills => skills;
+    public string IndustriesTitle => industriesTitle;
+    public Sprite IndustriesIcon => industriesIcon;
+    public IReadOnlyList<AboutItem> Industries => industries;
     public string FocusTitle => focusTitle;
     public Sprite FocusIcon => focusIcon;
     public IReadOnlyList<AboutItem> FocusItems => focusItems;
