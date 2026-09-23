@@ -60,43 +60,53 @@ MonoBehaviour:
   - title: Game Development
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.65882355, g: 0.33333334, b: 0.96862745, a: 1}
+    iconColor: {r: 0.65882355, g: 0.33333334, b: 0.96862745, a: 1}
+    outlineColor: {r: 0.65882355, g: 0.33333334, b: 0.96862745, a: 1}
   - title: XR / VR
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.23137255, g: 0.50980395, b: 0.9647059, a: 1}
+    iconColor: {r: 0.23137255, g: 0.50980395, b: 0.9647059, a: 1}
+    outlineColor: {r: 0.23137255, g: 0.50980395, b: 0.9647059, a: 1}
   - title: Creative Tech
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.13333334, g: 0.77254903, b: 0.36862746, a: 1}
+    iconColor: {r: 0.13333334, g: 0.77254903, b: 0.36862746, a: 1}
+    outlineColor: {r: 0.13333334, g: 0.77254903, b: 0.36862746, a: 1}
   - title: Interactive Experiences
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.9607843, g: 0.61960787, b: 0.043137256, a: 1}
+    iconColor: {r: 0.9607843, g: 0.61960787, b: 0.043137256, a: 1}
+    outlineColor: {r: 0.9607843, g: 0.61960787, b: 0.043137256, a: 1}
   - title: API Integrations
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.9254902, g: 0.28235295, b: 0.6, a: 1}
+    iconColor: {r: 0.9254902, g: 0.28235295, b: 0.6, a: 1}
+    outlineColor: {r: 0.9254902, g: 0.28235295, b: 0.6, a: 1}
   - title: Game Design
     subtitle: 
     icon: {fileID: 0}
-    accentColor: {r: 0.3882353, g: 0.4, b: 0.94509804, a: 1}
+    iconColor: {r: 0.3882353, g: 0.4, b: 0.94509804, a: 1}
+    outlineColor: {r: 0.3882353, g: 0.4, b: 0.94509804, a: 1}
   focusTitle: What I Focus On
   focusIcon: {fileID: 0}
   focusItems:
   - title: Engaging Gameplay
     subtitle: 
     icon: {fileID: 658593774, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
-    accentColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    iconColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    outlineColor: {r: 0.09803922, g: 0.2509804, b: 0.4, a: 0.69803923}
   - title: Immersive XR Experiences
     subtitle: 
     icon: {fileID: 2133091348, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
-    accentColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    iconColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    outlineColor: {r: 0.09803922, g: 0.2509804, b: 0.4, a: 0.69803923}
   - title: Creative Solutions
     subtitle: 
     icon: {fileID: 2133091348, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
-    accentColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    iconColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    outlineColor: {r: 0.09803922, g: 0.2509804, b: 0.4, a: 0.69803923}
   - title: Real World Impact
     subtitle: 
     icon: {fileID: -468214457, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
-    accentColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    iconColor: {r: 0.3764706, g: 0.64705884, b: 0.98039216, a: 1}
+    outlineColor: {r: 0.09803922, g: 0.2509804, b: 0.4, a: 0.69803923}

@@ -433,10 +433,11 @@ MonoBehaviour:
   titleText: {fileID: 2055154266368720038}
   subtitleText: {fileID: 0}
   iconImage: {fileID: 6369860451206831586}
-  accentGraphics:
+  iconGraphics:
+  - {fileID: 6369860451206831586}
+  outlineGraphics:
   - {fileID: 6027060192014917404}
   - {fileID: 559185226457366189}
-  - {fileID: 6369860451206831586}
 --- !u!1 &5961879778791655804
 GameObject:
   m_ObjectHideFlags: 0

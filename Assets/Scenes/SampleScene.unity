@@ -8185,7 +8185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1045148428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8193,17 +8193,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045148427}
-  m_LocalRotation: {x: 0, y: 0, z: 0.06975647, w: 0.9975641}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0000015497208, y: 0.00000071525574, z: 0.010967389, w: 0.9999399}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1128992418}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.257}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -677, y: -546}
-  m_SizeDelta: {x: 440, y: 220}
+  m_AnchoredPosition: {x: -143.8, y: -501.9}
+  m_SizeDelta: {x: 310.18, y: 155.09}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1045148429
 MonoBehaviour:
@@ -8256,8 +8256,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 22.7
+  m_fontSizeBase: 22.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12046,22 +12046,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 833945904}
     m_Modifications:
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.a
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.2509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.09803922
-      objectReference: {fileID: 0}
     - target: {fileID: 3122355313929589916, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_Name
       value: About Focus Card
@@ -12170,30 +12154,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12217,22 +12177,6 @@ PrefabInstance:
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinHeight
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredHeight
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14024,7 +13968,7 @@ MonoBehaviour:
   m_PreferredHeight: 3
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  m_LayoutPriority: 2
 --- !u!114 &1637647059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15393,22 +15337,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 833945904}
     m_Modifications:
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.a
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.2509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.09803922
-      objectReference: {fileID: 0}
     - target: {fileID: 3122355313929589916, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_Name
       value: About Focus Card
@@ -17479,22 +17407,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 833945904}
     m_Modifications:
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.a
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.2509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.09803922
-      objectReference: {fileID: 0}
     - target: {fileID: 3122355313929589916, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_Name
       value: About Focus Card
@@ -17603,30 +17515,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17650,22 +17538,6 @@ PrefabInstance:
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinHeight
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredHeight
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18358,22 +18230,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 833945904}
     m_Modifications:
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.a
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.2509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 813023148116439863, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.09803922
-      objectReference: {fileID: 0}
     - target: {fileID: 3122355313929589916, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_Name
       value: About Focus Card
@@ -18482,30 +18338,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7343533231754733145, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -18529,22 +18361,6 @@ PrefabInstance:
     - target: {fileID: 8246507834471097318, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_MinHeight
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredWidth
-      value: 410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586498781982040334, guid: b8d9498f866fd6c48ae3bc05ff706da8, type: 3}
-      propertyPath: m_PreferredHeight
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

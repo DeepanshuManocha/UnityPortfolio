@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>Shared view for skill pills and focus cards. Leave Subtitle empty on prefabs that don't show one.</summary>
@@ -9,36 +10,38 @@ public class AboutItemView : MonoBehaviour, IUIItemView<AboutItem>
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text subtitleText;
     [SerializeField] private Image iconImage;
-    [Tooltip("Borders, glows and icons tinted with the item's accent. Each keeps its authored alpha.")]
-    [SerializeField] private Graphic[] accentGraphics;
+    [Tooltip("Graphics tinted with the item's icon colour. Each keeps its authored alpha.")]
+    [SerializeField, FormerlySerializedAs("accentGraphics")] private Graphic[] iconGraphics;
+    [Tooltip("Borders and glows tinted with the item's outline colour. Each keeps its authored alpha.")]
+    [SerializeField] private Graphic[] outlineGraphics;
 
-    private float[] _accentBaseAlphas;
+    private float[] _iconBaseAlphas;
+    private float[] _outlineBaseAlphas;
 
     public void Bind(AboutItem item)
     {
         UIBinding.SetText(titleText, item.Title);
         UIBinding.SetText(subtitleText, item.Subtitle);
         UIBinding.SetIcon(iconImage, item.Icon);
-        ApplyAccent(item.AccentColor);
+        ApplyTint(iconGraphics, ref _iconBaseAlphas, item.IconColor);
+        ApplyTint(outlineGraphics, ref _outlineBaseAlphas, item.OutlineColor);
     }
 
-    private void ApplyAccent(Color accent)
+    private static void ApplyTint(Graphic[] graphics, ref float[] baseAlphas, Color tint)
     {
-        if (accentGraphics == null)
+        if (graphics == null)
             return;
 
-        CacheAccentAlphas();
-        for (int i = 0; i < accentGraphics.Length; i++)
-            UIBinding.SetTint(accentGraphics[i], accent, _accentBaseAlphas[i]);
+        baseAlphas ??= CacheAlphas(graphics);
+        for (int i = 0; i < graphics.Length; i++)
+            UIBinding.SetTint(graphics[i], tint, baseAlphas[i]);
     }
 
-    private void CacheAccentAlphas()
+    private static float[] CacheAlphas(Graphic[] graphics)
     {
-        if (_accentBaseAlphas != null)
-            return;
-
-        _accentBaseAlphas = new float[accentGraphics.Length];
-        for (int i = 0; i < accentGraphics.Length; i++)
-            _accentBaseAlphas[i] = accentGraphics[i] != null ? accentGraphics[i].color.a : 1f;
+        var alphas = new float[graphics.Length];
+        for (int i = 0; i < graphics.Length; i++)
+            alphas[i] = graphics[i] != null ? graphics[i].color.a : 1f;
+        return alphas;
     }
 }

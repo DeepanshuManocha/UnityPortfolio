@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class AboutItem
@@ -8,12 +9,14 @@ public class AboutItem
     [SerializeField] private string title;
     [SerializeField, TextArea(1, 3)] private string subtitle;
     [SerializeField] private Sprite icon;
-    [SerializeField] private Color accentColor = Color.white;
+    [SerializeField, FormerlySerializedAs("accentColor")] private Color iconColor = Color.white;
+    [SerializeField] private Color outlineColor = Color.white;
 
     public string Title => title;
     public string Subtitle => subtitle;
     public Sprite Icon => icon;
-    public Color AccentColor => accentColor;
+    public Color IconColor => iconColor;
+    public Color OutlineColor => outlineColor;
 }
 
 [CreateAssetMenu(
