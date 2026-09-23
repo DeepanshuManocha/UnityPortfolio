@@ -45,16 +45,16 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  role: Game Developer & XR Creator
+  role: Game Developer & Team Lead
   roleColor: {r: 0.1764706, g: 0.83137256, b: 0.7490196, a: 1}
   bio: I create interactive experiences that blend gameplay, immersive XR, and creative
     technology. I love turning ideas into engaging, meaningful experiences through
     game design, interactive systems and API integrations.
   tagline: 'Games
 
-    People
+    Experiences
 
-    Real Experiences'
+    Real Impact'
   background: {fileID: 21300000, guid: 8e58f27217762bf4982dd6edb905c8bc, type: 3}
   skills:
   - title: Game Development
