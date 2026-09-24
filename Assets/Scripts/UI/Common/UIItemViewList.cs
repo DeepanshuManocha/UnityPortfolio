@@ -20,22 +20,29 @@ public class UIItemViewList<TData, TView> where TView : Component, IUIItemView<T
     public RectTransform Container => container;
     public bool IsValid => prefab != null && container != null;
 
-    public void Bind(IReadOnlyList<TData> items)
+    /// <param name="include">Optional filter; items it rejects get no view. Pass a cached delegate to avoid allocations.</param>
+    public void Bind(IReadOnlyList<TData> items, Func<TData, bool> include = null)
     {
         if (!IsValid)
             return;
 
         AdoptExistingViews();
 
+        int visibleCount = 0;
         int count = items?.Count ?? 0;
         for (int i = 0; i < count; i++)
         {
-            TView view = i < _views.Count ? _views[i] : CreateView();
+            TData item = items[i];
+            if (include != null && !include(item))
+                continue;
+
+            TView view = visibleCount < _views.Count ? _views[visibleCount] : CreateView();
             SetActive(view, true);
-            view.Bind(items[i]);
+            view.Bind(item);
+            visibleCount++;
         }
 
-        for (int i = count; i < _views.Count; i++)
+        for (int i = visibleCount; i < _views.Count; i++)
             SetActive(_views[i], false);
     }
 

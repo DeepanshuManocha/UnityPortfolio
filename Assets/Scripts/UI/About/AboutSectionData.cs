@@ -5,12 +5,15 @@ using UnityEngine;
 [Serializable]
 public class AboutItem
 {
+    [Tooltip("Keep the item in the data but don't show it in the About section.")]
+    [SerializeField] private bool isHidden;
     [SerializeField] private string title;
     [SerializeField, TextArea(1, 3)] private string subtitle;
     [SerializeField] private Sprite icon;
     [SerializeField] private Color iconColor = Color.white;
     [SerializeField] private Color outlineColor = Color.white;
 
+    public bool IsHidden => isHidden;
     public string Title => title;
     public string Subtitle => subtitle;
     public Sprite Icon => icon;

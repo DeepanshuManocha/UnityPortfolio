@@ -3064,7 +3064,7 @@ GameObject:
   - component: {fileID: 308257443}
   - component: {fileID: 308257442}
   m_Layer: 0
-  m_Name: Canvas (1)
+  m_Name: Project Section Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9771,7 +9771,9 @@ MonoBehaviour:
   bioText: {fileID: 1952346325}
   taglineText: {fileID: 1045148429}
   backgroundImage: {fileID: 0}
-  skills:
+  industriesTitleText: {fileID: 0}
+  industriesIconImage: {fileID: 0}
+  industries:
     prefab: {fileID: 5287837126094972492, guid: b58507764e187474999b640368200631, type: 3}
     container: {fileID: 381243060}
   focusTitleText: {fileID: 1116439880}
@@ -15050,7 +15052,7 @@ GameObject:
   - component: {fileID: 1742974534}
   - component: {fileID: 1742974533}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

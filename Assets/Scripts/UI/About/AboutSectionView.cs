@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -29,6 +30,9 @@ public class AboutSectionView : MonoBehaviour
     [SerializeField] private TMP_Text focusTitleText;
     [SerializeField] private Image focusIconImage;
     [SerializeField] private UIItemViewList<AboutItem, AboutItemView> focusItems;
+
+    // Cached so binding doesn't allocate a new delegate on every refresh.
+    private static readonly Func<AboutItem, bool> IsVisible = item => item != null && !item.IsHidden;
 
     private AboutSectionData _boundData;
 
@@ -90,8 +94,8 @@ public class AboutSectionView : MonoBehaviour
             backgroundImage.enabled = data.Background != null;
         }
 
-        industries.Bind(data.Industries);
-        focusItems.Bind(data.FocusItems);
+        industries.Bind(data.Industries, IsVisible);
+        focusItems.Bind(data.FocusItems, IsVisible);
     }
 
     private void SubscribeToData()
