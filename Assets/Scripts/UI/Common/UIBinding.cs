@@ -38,6 +38,26 @@ public static class UIBinding
         graphic.color = tint;
     }
 
+    /// <summary>
+    /// Tints every graphic, keeping each one's authored alpha. The alphas are captured into
+    /// <paramref name="baseAlphas"/> on the first call, so re-tinting never compounds.
+    /// </summary>
+    public static void SetTints(Graphic[] graphics, ref float[] baseAlphas, Color tint)
+    {
+        if (graphics == null)
+            return;
+
+        if (baseAlphas == null)
+        {
+            baseAlphas = new float[graphics.Length];
+            for (int i = 0; i < graphics.Length; i++)
+                baseAlphas[i] = graphics[i] != null ? graphics[i].color.a : 1f;
+        }
+
+        for (int i = 0; i < graphics.Length; i++)
+            SetTint(graphics[i], tint, baseAlphas[i]);
+    }
+
     private static void SetActive(GameObject target, bool isActive)
     {
         if (target.activeSelf != isActive)

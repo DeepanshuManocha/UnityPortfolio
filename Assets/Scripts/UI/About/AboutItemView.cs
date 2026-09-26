@@ -23,25 +23,7 @@ public class AboutItemView : MonoBehaviour, IUIItemView<AboutItem>
         UIBinding.SetText(titleText, item.Title);
         UIBinding.SetText(subtitleText, item.Subtitle);
         UIBinding.SetIcon(iconImage, item.Icon);
-        ApplyTint(iconGraphics, ref _iconBaseAlphas, item.IconColor);
-        ApplyTint(outlineGraphics, ref _outlineBaseAlphas, item.OutlineColor);
-    }
-
-    private static void ApplyTint(Graphic[] graphics, ref float[] baseAlphas, Color tint)
-    {
-        if (graphics == null)
-            return;
-
-        baseAlphas ??= CacheAlphas(graphics);
-        for (int i = 0; i < graphics.Length; i++)
-            UIBinding.SetTint(graphics[i], tint, baseAlphas[i]);
-    }
-
-    private static float[] CacheAlphas(Graphic[] graphics)
-    {
-        var alphas = new float[graphics.Length];
-        for (int i = 0; i < graphics.Length; i++)
-            alphas[i] = graphics[i] != null ? graphics[i].color.a : 1f;
-        return alphas;
+        UIBinding.SetTints(iconGraphics, ref _iconBaseAlphas, item.IconColor);
+        UIBinding.SetTints(outlineGraphics, ref _outlineBaseAlphas, item.OutlineColor);
     }
 }
