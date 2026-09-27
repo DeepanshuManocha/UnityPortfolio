@@ -56,23 +56,8 @@ public class ProjectCardView : MonoBehaviour, IUIItemView<ProjectCardModel>
         UIBinding.SetText(titleText, project.Title);
         UIBinding.SetText(descriptionText, project.ShortDescription);
         UIBinding.SetTints(outlineGraphics, ref _outlineBaseAlphas, project.OutlineColor);
-        BindThumbnail(project.Thumbnail);
+        UIBinding.SetSprite(thumbnailImage, project.Thumbnail, thumbnailFitter);
         tags.Bind(project.Tags);
-    }
-
-    private void BindThumbnail(Sprite thumbnail)
-    {
-        if (thumbnailImage == null)
-            return;
-
-        thumbnailImage.sprite = thumbnail;
-        thumbnailImage.enabled = thumbnail != null;
-
-        if (thumbnail != null && thumbnailFitter != null)
-        {
-            Rect rect = thumbnail.rect;
-            thumbnailFitter.aspectRatio = rect.width / Mathf.Max(1f, rect.height);
-        }
     }
 
     private void HandleClick()

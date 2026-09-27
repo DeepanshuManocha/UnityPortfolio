@@ -290,23 +290,14 @@ public class ProjectsSectionView : MonoBehaviour
     {
         if (paginationRoot != null)
         {
-            SetActive(paginationRoot, isVisible);
+            UIBinding.SetActive(paginationRoot, isVisible);
             return;
         }
 
         // No root assigned: hide the individual pieces instead.
-        if (previousButton != null)
-            SetActive(previousButton.gameObject, isVisible);
-        if (nextButton != null)
-            SetActive(nextButton.gameObject, isVisible);
-        if (pages.Container != null)
-            SetActive(pages.Container.gameObject, isVisible);
-    }
-
-    private static void SetActive(GameObject target, bool isActive)
-    {
-        if (target.activeSelf != isActive)
-            target.SetActive(isActive);
+        UIBinding.SetActive(previousButton, isVisible);
+        UIBinding.SetActive(nextButton, isVisible);
+        UIBinding.SetActive(pages.Container, isVisible);
     }
 
     private int CountProjects(ProjectCategory category)

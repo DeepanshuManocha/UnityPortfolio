@@ -26,3 +26,20 @@ MonoBehaviour:
     color: {r: 0.13, g: 0.83, b: 0.93, a: 1}
   - label: API Integration
     color: {r: 0.13, g: 0.77, b: 0.37, a: 1}
+  about: A single-player tablet game designed for naval tactical training. The game
+    simulates realistic scenarios to develop situational awareness, decision making,
+    command and control skills, and resource management.
+  role: I led the game design and development, including mission design, gameplay
+    systems, UI/UX, and implementation in Unity. I also collaborated on content,
+    testing, and deployment for the pilot programme.
+  media:
+  - image: {fileID: 121789731, guid: 3604f7fbd7170b7419e94581bfde1752, type: 3}
+    videoPath: 
+  - image: {fileID: 0}
+    videoPath: Itachi.mp4
+  techStack:
+  - {fileID: 11400000, guid: e81470a9a7897c445bdb82a53670261d, type: 2}
+  - {fileID: 11400000, guid: 841bfed20119bff45813f3c599ff6da5, type: 2}
+  - {fileID: 11400000, guid: c106a633cc71e6540b86dfa542aef5bf, type: 2}
+  - {fileID: 11400000, guid: f2accee0e5210ef40a398ea826474946, type: 2}
+  - {fileID: 11400000, guid: 0418aab0f026ddb4b9c4b76ce7d2f064, type: 2}

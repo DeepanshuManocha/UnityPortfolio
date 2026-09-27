@@ -28,6 +28,31 @@ public static class UIBinding
             image.sprite = sprite;
     }
 
+    /// <summary>
+    /// Assigns the sprite and disables the Image (keeping its layout slot) when there is none. With an
+    /// Envelope Parent <paramref name="fitter"/>, the image fills and crops to its masked frame at any aspect.
+    /// </summary>
+    public static void SetSprite(Image image, Sprite sprite, AspectRatioFitter fitter = null)
+    {
+        if (image == null)
+            return;
+
+        image.sprite = sprite;
+        image.enabled = sprite != null;
+
+        if (sprite != null && fitter != null)
+        {
+            Rect rect = sprite.rect;
+            fitter.aspectRatio = rect.width / Mathf.Max(1f, rect.height);
+        }
+    }
+
+    public static void SetActive(Component target, bool isActive)
+    {
+        if (target != null)
+            SetActive(target.gameObject, isActive);
+    }
+
     /// <summary>Applies the tint's RGB and multiplies its alpha with the graphic's authored alpha.</summary>
     public static void SetTint(Graphic graphic, Color tint, float baseAlpha)
     {
@@ -58,9 +83,10 @@ public static class UIBinding
             SetTint(graphics[i], tint, baseAlphas[i]);
     }
 
-    private static void SetActive(GameObject target, bool isActive)
+    /// <summary>SetActive that skips the call (and the layout rebuild it triggers) when nothing changes.</summary>
+    public static void SetActive(GameObject target, bool isActive)
     {
-        if (target.activeSelf != isActive)
+        if (target != null && target.activeSelf != isActive)
             target.SetActive(isActive);
     }
 }
