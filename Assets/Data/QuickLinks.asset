@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f09311697ecd04fae92d2a02746835, type: 3}
+  m_Name: QuickLinks
+  m_EditorClassIdentifier: Assembly-CSharp::QuickLinksData
+  links:
+  - isHidden: 0
+    label: LinkedIn
+    icon: {fileID: -1019198807, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
+    type: 0
+    value: https://www.linkedin.com/in/deepanshumanocha/
+    emailSubject: 
+    separatorBefore: 0
+    hideDuringTour: 0
+  - isHidden: 0
+    label: Email Me
+    icon: {fileID: 1038864918, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
+    type: 1
+    value: dmanocha1509@gmail.com
+    emailSubject: Hello from your portfolio
+    separatorBefore: 0
+    hideDuringTour: 0
+  - isHidden: 0
+    label: Resume
+    icon: {fileID: -2112199917, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
+    type: 0
+    value: Resume_Deepanshu_Manocha
+    emailSubject: 
+    separatorBefore: 0
+    hideDuringTour: 0
+  - isHidden: 0
+    label: Restart Tour
+    icon: {fileID: -1872134586, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
+    type: 3
+    value: restart-tour
+    emailSubject: 
+    separatorBefore: 1
+    hideDuringTour: 1

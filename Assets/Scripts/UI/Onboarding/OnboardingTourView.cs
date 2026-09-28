@@ -73,6 +73,9 @@ public class OnboardingTourView : MonoBehaviour
     private bool _isPanelVisible = true;
 
     public bool IsRunning => _isRunning;
+
+    /// <summary>Raised when the tour starts (true) and when it ends (false).</summary>
+    public event Action<bool> RunningChanged;
     public int StepIndex => _stepIndex;
 
     private void Awake()
@@ -170,6 +173,7 @@ public class OnboardingTourView : MonoBehaviour
 
     private void Begin(float delay)
     {
+        bool wasRunning = _isRunning;
         _isRunning = true;
         _isDismissed = false;
         _isWaitingForTransition = false;
@@ -185,6 +189,8 @@ public class OnboardingTourView : MonoBehaviour
 
         int cameraIndex = cameraSwitcher != null ? cameraSwitcher.CurrentIndex : data.Steps[0].CameraIndex;
         ShowStepForCamera(cameraIndex, delay);
+        if (!wasRunning)
+            RunningChanged?.Invoke(true);
     }
 
     private void Complete()
@@ -202,6 +208,7 @@ public class OnboardingTourView : MonoBehaviour
 
         StopListening();
         PlayPanel(false, 0f);
+        RunningChanged?.Invoke(false);
         completed?.Invoke();
     }
 
