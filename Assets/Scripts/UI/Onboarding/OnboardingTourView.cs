@@ -126,11 +126,18 @@ public class OnboardingTourView : MonoBehaviour
         ShowStepForCamera(_pendingCameraIndex, 0f);
     }
 
-    /// <summary>X button: hides the panel until the next camera transition finishes.</summary>
+    /// <summary>X button: hides the panel until the next camera transition finishes; on the last step it ends the tour.</summary>
     public void Dismiss()
     {
         if (!_isRunning)
             return;
+
+        // Closing the last step finishes the tour (which also brings back tour-hidden quick links).
+        if (_hasReachedLastStep && _stepIndex == data.Steps.Count - 1)
+        {
+            Complete();
+            return;
+        }
 
         _isDismissed = true;
         RefreshVisibility(0f);

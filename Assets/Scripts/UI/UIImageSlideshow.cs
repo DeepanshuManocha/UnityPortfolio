@@ -68,6 +68,8 @@ public sealed class UIImageSlideshow : MonoBehaviour
     public Sprite CurrentSprite => _currentImage != null ? _currentImage.sprite : null;
     public bool IsPlaying => _isPlaying;
     public bool IsTransitioning => _isTransitioning;
+    public SlideshowImageCollection ImageCollection => imageCollection;
+    public UnityEvent<int, Sprite> ImageChanged => imageChanged;
 
     private void Reset()
     {
