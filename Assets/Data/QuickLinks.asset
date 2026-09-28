@@ -33,7 +33,7 @@ MonoBehaviour:
     label: Resume
     icon: {fileID: -2112199917, guid: 5d3d94a820462044da6e554d1a8d0695, type: 3}
     type: 0
-    value: Resume_Deepanshu_Manocha
+    value: Resume_Deepanshu_Manocha.pdf
     emailSubject: 
     separatorBefore: 0
     hideDuringTour: 0
