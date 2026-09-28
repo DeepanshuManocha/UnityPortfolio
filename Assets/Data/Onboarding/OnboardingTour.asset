@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd49456910c287c4aaa27ce1ad5e4149, type: 3}
+  m_Name: OnboardingTour
+  m_EditorClassIdentifier: Assembly-CSharp::OnboardingTourData
+  eyebrow: PORTFOLIO TOUR
+  skipLabel: Skip Tour
+  finishLabel: Finish Tour
+  titleHighlightGradient:
+    serializedVersion: 2
+    key0: {r: 0.37, g: 0.92, b: 0.83, a: 1}
+    key1: {r: 0.38, g: 0.65, b: 0.98, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  instructionHighlightColor: {r: 0.24, g: 0.85, b: 1, a: 1}
+  steps:
+  - cameraIndex: 0
+    titleLead: Welcome
+    titleHighlight: 
+    description: This interactive room is my portfolio. Each wall represents a different
+      part of my journey, so feel free to look around and explore each section.
+    instruction: to explore the room and click highlighted screens to learn more.
+    instructionHighlight: Scroll
+    instructionIcon: {fileID: 0}
+  - cameraIndex: 1
+    titleLead: About Me &
+    titleHighlight: Projects
+    description: Get to know what I do and explore some of the projects I've worked
+      on across games, XR, education, and interactive experiences.
+    instruction: on any project to take a closer look.
+    instructionHighlight: Click
+    instructionIcon: {fileID: 0}
+  - cameraIndex: 2
+    titleLead: My Career
+    titleHighlight: Journey
+    description: 'From my first internship to leading teams: the milestones that
+      shaped how I build games and experiences.'
+    instruction: 
+    instructionHighlight: 
+    instructionIcon: {fileID: 0}
+  - cameraIndex: 3
+    titleLead: Beyond the
+    titleHighlight: Code
+    description: "There\u2019s more to me than development. Here are some of the
+      interests, experiences, and activities that have shaped who I am outside of
+      work."
+    instruction: 
+    instructionHighlight: 
+    instructionIcon: {fileID: 0}
+  - cameraIndex: 4
+    titleLead: Skills & Toolkit
+    titleHighlight: 
+    description: A look at the technologies, creative tools, and problem-solving
+      skills I use to turn ideas into interactive experiences.
+    instruction: 
+    instructionHighlight: 
+    instructionIcon: {fileID: 0}

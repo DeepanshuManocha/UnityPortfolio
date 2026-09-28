@@ -85,6 +85,7 @@ public class ProjectDetailView : MonoBehaviour
     private Vector3 _panelRestingScale = Vector3.one;
     private bool[] _disabledStates;
     private bool _isOpen;
+    private bool _isRegisteredModal;
     private int _selectedMedia;
     private int _mediaPage;
     private int _mediaPageCount;
@@ -124,6 +125,7 @@ public class ProjectDetailView : MonoBehaviour
         _animation = null;
         if (_isOpen)
             SetBlockedBehaviours(false);
+        SetRegisteredModal(false);
     }
 
     private void Update()
@@ -143,6 +145,7 @@ public class ProjectDetailView : MonoBehaviour
         {
             _isOpen = true;
             SetBlockedBehaviours(true);
+            SetRegisteredModal(true);
             UIBinding.SetActive(modalRoot, true);
         }
 
@@ -161,6 +164,7 @@ public class ProjectDetailView : MonoBehaviour
 
         _isOpen = false;
         SetBlockedBehaviours(false);
+        SetRegisteredModal(false);
         PlayAnimation(false);
         closed?.Invoke();
     }
@@ -344,6 +348,19 @@ public class ProjectDetailView : MonoBehaviour
                 behaviour.enabled = true;
             }
         }
+    }
+
+    /// <summary>Reports open/close to <see cref="UIModalTracker"/> exactly once per state change.</summary>
+    private void SetRegisteredModal(bool isOpen)
+    {
+        if (_isRegisteredModal == isOpen)
+            return;
+
+        _isRegisteredModal = isOpen;
+        if (isOpen)
+            UIModalTracker.NotifyOpened();
+        else
+            UIModalTracker.NotifyClosed();
     }
 
     private static void AddListener(Button button, UnityAction action)
