@@ -1,6 +1,7 @@
 const canvas = document.querySelector("#unity-canvas");
-const loadingOverlay = document.querySelector("#loading-overlay");
-const loadingBar = document.querySelector("#loadingBar");
+const loadingEl = document.querySelector("#loading");
+const loadingFill = document.querySelector("#loadingFill");
+const loadingTip = document.querySelector("#loadingTip");
 const fullscreenBtn = document.querySelector("#fullscreen-btn");
 
 let myGameInstance = null;
@@ -42,27 +43,12 @@ function resizeCanvasDisplay() {
   canvas.style.height = `${displayHeight}px`;
 }
 
-function updateLoadingVisual(progress) {
-  if (!loadingBar) return;
-
-  if (progress > 0.02) {
-    loadingBar.classList.add("active");
+// Unity reports ~0-0.9 while downloading and the rest while starting up.
+function setProgress(progress) {
+  loadingFill.style.width = `${Math.round(progress * 100)}%`;
+  if (progress >= 0.9) {
+    loadingTip.textContent = "Setting up the room…";
   }
-
-  if (progress > 0.85) {
-    loadingBar.classList.add("near-done");
-  }
-
-  const minScale = 0.92;
-  const maxScale = 1.08;
-  const scale = minScale + (maxScale - minScale) * progress;
-
-  const minOpacity = 0.35;
-  const maxOpacity = 1;
-  const opacity = minOpacity + (maxOpacity - minOpacity) * progress;
-
-  loadingBar.style.transform = `scale(${scale})`;
-  loadingBar.style.opacity = String(opacity);
 }
 
 function revealExperience() {
@@ -71,7 +57,7 @@ function revealExperience() {
   });
 
   setTimeout(() => {
-    loadingOverlay.classList.add("hidden");
+    loadingEl.classList.add("done");
   }, 250);
 
   setTimeout(() => {
@@ -88,31 +74,16 @@ fullscreenBtn.addEventListener("click", () => {
 resizeCanvasDisplay();
 window.addEventListener("resize", resizeCanvasDisplay);
 
-createUnityInstance(canvas, config, (progress) => {
-  updateLoadingVisual(progress);
-})
+createUnityInstance(canvas, config, setProgress)
   .then((instance) => {
     myGameInstance = instance;
     resizeCanvasDisplay();
-    updateLoadingVisual(1);
+    setProgress(1);
 
-    setTimeout(() => {
-      revealExperience();
-    }, 250);
+    setTimeout(revealExperience, 250);
   })
   .catch((message) => {
     console.error("Unity failed to load:", message);
-
-    loadingOverlay.innerHTML = `
-      <div style="
-        color: white;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        padding: 24px;
-        max-width: 600px;
-      ">
-        <h2 style="margin: 0 0 12px 0;">Failed to load</h2>
-        <p style="margin: 0; opacity: 0.85;">${String(message)}</p>
-      </div>
-    `;
+    loadingTip.textContent = "Something went wrong loading the room — please refresh.";
+    loadingTip.classList.add("error");
   });
