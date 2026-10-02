@@ -426,7 +426,7 @@ TextureImporter:
         width: 164
         height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,6 +435,28 @@ TextureImporter:
       bones: []
       spriteID: 2a0bed133d3c9df49a377994a9303510
       internalID: 657302358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 57
+        width: 102
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7764c1b9b5d1f104db7b6d074ce3e7d0
+      internalID: 946871565
       vertices: []
       indices: 
       edges: []
@@ -463,6 +485,7 @@ TextureImporter:
       Icons and Logos_7: -1791010785
       Sprite Sheet 1_0: 1532667433
       Sprite Sheet 1_1: -1806609817
+      Sprite Sheet 1_10: 946871565
       Sprite Sheet 1_2: 1479884698
       Sprite Sheet 1_3: 1510951369
       Sprite Sheet 1_4: -1019198807
