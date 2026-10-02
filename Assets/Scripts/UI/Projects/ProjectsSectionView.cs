@@ -36,7 +36,8 @@ public class ProjectsSectionView : MonoBehaviour
     [SerializeField] private CanvasGroup cardsGroup;
 
     [Header("Pagination")]
-    [Tooltip("Hidden when everything fits on one page.")]
+    [Tooltip("Kept active so the row always reserves its space; its buttons are concealed when there's only one page. " +
+             "Defaults to the Previous button's parent.")]
     [SerializeField] private GameObject paginationRoot;
     [SerializeField] private UIItemViewList<UIOptionModel, UIOptionButtonView> pages;
     [SerializeField] private Button previousButton;
@@ -286,18 +287,20 @@ public class ProjectsSectionView : MonoBehaviour
             nextButton.interactable = _pageIndex < _pageCount - 1;
     }
 
+    /// <summary>
+    /// Conceals the pagination buttons (CanvasGroup) instead of deactivating them, so the row keeps its height and
+    /// the cards above don't resize between one-page and multi-page filters. The row itself is left to the
+    /// section reveal, which animates its CanvasGroup.
+    /// </summary>
     private void SetPaginationVisible(bool isVisible)
     {
-        if (paginationRoot != null)
-        {
-            UIBinding.SetActive(paginationRoot, isVisible);
-            return;
-        }
+        if (paginationRoot == null && previousButton != null && previousButton.transform.parent != null)
+            paginationRoot = previousButton.transform.parent.gameObject;
+        UIBinding.SetActive(paginationRoot, true);
 
-        // No root assigned: hide the individual pieces instead.
-        UIBinding.SetActive(previousButton, isVisible);
-        UIBinding.SetActive(nextButton, isVisible);
-        UIBinding.SetActive(pages.Container, isVisible);
+        UIBinding.SetConcealed(previousButton, !isVisible);
+        UIBinding.SetConcealed(nextButton, !isVisible);
+        UIBinding.SetConcealed(pages.Container, !isVisible);
     }
 
     private int CountProjects(ProjectCategory category)

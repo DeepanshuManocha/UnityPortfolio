@@ -47,6 +47,27 @@ public static class UIBinding
         }
     }
 
+    /// <summary>
+    /// Makes the target invisible and unclickable through a CanvasGroup (added on first use) while it stays
+    /// active, so it keeps its place in layout groups.
+    /// </summary>
+    public static void SetConcealed(Component target, bool isConcealed)
+    {
+        if (target == null)
+            return;
+
+        if (!target.TryGetComponent(out CanvasGroup group))
+        {
+            if (!isConcealed)
+                return;
+            group = target.gameObject.AddComponent<CanvasGroup>();
+        }
+
+        group.alpha = isConcealed ? 0f : 1f;
+        group.interactable = !isConcealed;
+        group.blocksRaycasts = !isConcealed;
+    }
+
     public static void SetActive(Component target, bool isActive)
     {
         if (target != null)

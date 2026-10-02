@@ -68,6 +68,11 @@ public class ProjectDetailView : MonoBehaviour
     [SerializeField, Range(0.5f, 1f)] private float startScale = 0.95f;
     [SerializeField] private bool useUnscaledTime = true;
 
+    [Header("Sources")]
+    [Tooltip("Sections whose card clicks open this view. Leave empty to listen to every ProjectsSectionView in the " +
+             "scene (wired in code, so rebuilding a section never loses the link).")]
+    [SerializeField] private List<ProjectsSectionView> projectSources = new();
+
     [Header("Events")]
     [SerializeField] private UnityEvent<ProjectData> opened;
     [SerializeField] private UnityEvent closed;
@@ -76,6 +81,7 @@ public class ProjectDetailView : MonoBehaviour
     private readonly List<UIOptionModel> _dotModels = new();
     private readonly List<TechStackItem> _techItems = new();
 
+    private UnityAction<ProjectData> _openProject;
     private Action<int> _thumbClicked;
     private Action<int> _dotClicked;
     private TweenCallback _deactivateModal;
@@ -95,6 +101,7 @@ public class ProjectDetailView : MonoBehaviour
 
     private void Awake()
     {
+        _openProject = Open;
         _thumbClicked = SelectMedia;
         _dotClicked = ShowMediaPage;
         _deactivateModal = DeactivateModal;
@@ -119,8 +126,26 @@ public class ProjectDetailView : MonoBehaviour
         RemoveListener(nextMediaButton, NextMediaPage);
     }
 
+    private void OnEnable()
+    {
+        if (projectSources.Count == 0)
+            projectSources.AddRange(FindObjectsByType<ProjectsSectionView>(FindObjectsInactive.Include));
+
+        for (int i = 0; i < projectSources.Count; i++)
+        {
+            if (projectSources[i] != null)
+                projectSources[i].ProjectSelected.AddListener(_openProject);
+        }
+    }
+
     private void OnDisable()
     {
+        for (int i = 0; i < projectSources.Count; i++)
+        {
+            if (projectSources[i] != null)
+                projectSources[i].ProjectSelected.RemoveListener(_openProject);
+        }
+
         _animation?.Kill();
         _animation = null;
         if (_isOpen)
